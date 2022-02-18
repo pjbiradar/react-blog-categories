@@ -1,0 +1,644 @@
+.start{
+  
+    text-align: center;
+    color: indigo;
+    
+}
+.deco{
+    text-decoration-line: none;
+}
+.high{
+  
+
+    border: 2px solid brown;
+    width: 79em;
+    margin-left: 8em;
+    /* text-decoration-line: none; */
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.homes{
+    text-decoration-line: none;
+}
+ul li{
+    display: inline-block;
+    margin: 20px;
+    list-style: none;
+}
+.top{
+    display: flex;
+    justify-content: center;
+    color: mediumblue;
+  
+}
+.box{
+
+    border: 2px solid whitesmoke;
+    width: 80%;
+    margin-left: 149px;
+    display: flex;
+    height: 489px;
+    margin-top: 128px;
+}
+    
+.box2{
+    height: 383px;
+    width: 500px;
+    /* background-color:whitesmoke; */
+    margin: 10px;
+    cursor: pointer;
+}
+.image1{
+
+    width: 340px;
+    height: 230px;
+}
+.title{
+    font-size: larger;
+    font-weight: bolder;
+}
+.latest{
+    position: relative;
+    top: 64px;
+    right: 573px;
+}
+.titlelatest{
+    font-size: larger;
+    font-weight: bolder;
+}
+.highlight{
+    font-size: larger;
+    font-weight: bolder;
+
+}
+.indexhighlight{
+    position: relative;
+    font-weight: bolder;
+    color: aliceblue;
+    font-size: x-large;
+}
+.thelatest{
+    position: absolute;
+    top: 762px;
+    left: 147px;
+}
+.boxlatest{
+    display: flex;
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+.boxmain{
+  
+    border: 2px solid whitesmoke;
+    width: 44%;
+    margin-left: 141px;
+    margin-top: 83px;
+
+}
+
+.imageslatest{
+    width: 350px;
+    height: 230px;
+    padding-bottom: 2px;
+}
+.space{
+    margin-left: 24px;
+}
+.postadd{
+
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    top: 1393px;
+    left: 1000px;
+    height: 709px;
+    width: 375px;
+    
+
+
+}
+.advertise{
+    position: relative;
+    top: 300px;
+    font-size: x-large;
+}
+.imagetoppost{
+    width: 260px;
+}
+
+.up{
+    margin-left: 1024px;
+    position: absolute;
+    top: 2115px;
+    border: 1px solid whitesmoke
+}
+.headingoftoppost{
+    margin-right: 17px;
+}
+.storiesbox{
+    border: 2px solid gray;
+    width: 81%;
+    position: relative;
+    margin-left: 141px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 3px;
+}
+.headingofstories{
+ 
+
+    margin-top: 400px;
+    margin-right: 1042px;
+}
+.titlestories{
+    font-size: medium;
+    font-weight: 700;
+}
+/* .descriptionstories{
+    border: 1px solid white
+} */
+.disp1{
+
+    width: 80%;
+    margin-left: 139px;
+    border: 3px solid whitesmoke;
+    margin-top: 82px;
+    height: 476px;
+    display: flex;
+}
+
+.datamove{
+   
+    right: 123px;
+    position: relative;
+    bottom: 246px;
+    color: whitesmoke;
+    font-size: 21px;
+    font-weight: bolder;
+    left: 30px;
+}
+.dips3{
+    width: 300px;
+}
+.miniimg{
+    width: 371px;
+    height: 235px;
+    border-radius: 4px;
+
+}
+.imagemini{
+
+   
+    width: 372px;
+    padding-bottom: 1px;
+    height: 238px;
+    margin-left: 3px;
+    border-radius: 13px;
+}
+.imagemini2{
+    
+    width: 372px;
+    padding-bottom: 1px;
+    height: 238px;
+    margin-left: 3px;
+    border-radius: 13px;
+
+}
+.brek{
+    display: flex;
+    flex-direction: column;
+}
+.brek2{
+    position: relative;
+    bottom: 68px;
+}
+.disp6{
+    width: min-content;
+}
+
+.bigimg{
+    width: 844px;
+    height: 475px;
+    border-radius: 4px
+}
+/* .dataing{
+    position: absolute;
+} */
+ .left{
+    width: 500px;
+    height: 1000px;
+} 
+.right{
+    width: 100px;
+
+}
+.travelimage{
+    margin-top: 185px;
+    margin-left: 146px;
+}
+.dataing{
+    position: relative;
+    bottom: 52px;
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+}
+.button{
+    border: 2px solid cornflowerblue;
+    width: 147px;
+    margin-right: 1088px;
+    height: 57px;
+    margin-top: 30px;
+    background-color: cornflowerblue;
+    font-size: larger;
+}
+.spacing{
+    width: min-content;
+}
+.tophead{
+    margin-left: 51px;
+    width: 300px;
+}
+.topbolly{
+    margin-top: 3px;
+}
+.mainbollywood{
+
+    width: 300px;
+    position: absolute;
+    top: 215px;
+    left: 947px;
+}
+.straight{
+    margin-left: 2px;
+}
+.postaddbolly{
+
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    top: 1337px;
+    left: 954px;
+    height: 666px;
+    width: 300px;
+}
+.deets{
+
+    border: 2px solid whitesmoke;
+    width: 735px;
+    margin-left: 354px;
+    display: flex;
+    margin-top: 47px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.imagedeets{
+    width: 390px;
+}
+.paradeets{
+    text-align: center;
+    font-size: medium;
+}
+.menu{
+   
+   
+    display: none;
+    
+}
+.storiesofcategory{
+    cursor: pointer;
+}
+.insta{
+
+    color: hotpink;
+    font-size: 200%;
+    position: relative;
+    left: 291%;
+    bottom: 62px;
+}
+.facebook{
+
+    font-size: 200%;
+    color: skyblue;
+    position: relative;
+    bottom: 61px;
+    left: 311%;
+    
+
+}
+.twitter{
+
+    font-size: 200%;
+    color: darkblue;
+    position: relative;
+    left: 330%;
+    bottom: 61px;
+
+}
+.sharing{
+    position: relative;
+    font-size: larger;
+    right: 69px;
+}
+.social{
+
+    border: 3px solid whitesmoke;
+    /* position: relative; */
+    margin-left: 188px;
+    width: 198px;
+    height: 79px;
+}
+
+
+@media screen and (min-width:360px) and (max-width:640px) {
+    html{
+        font-size: 70%;
+    }
+    .start{
+        font-size: larger;
+        border: 2px solid blue;
+        position:absolute;
+        width: 99%;
+        background-color: whitesmoke;
+
+    }
+    .no{
+        display: none;
+    }
+    .high{
+    
+    border: 2px solid brown;
+    width: 31.6em;
+    margin-left: 0em;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    }
+   
+    .clc{
+
+        position: relative;
+        left: 236px;
+        top: 29px;
+    }
+    .top{
+
+
+    display: flex;
+    justify-content: flex-start;
+    width: 98%;
+    font-size: 135%;
+    color: mediumblue;
+    border: 3px solid gray;
+      
+    }
+   
+    .menu{
+    color: blue;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    left: 10em;
+    display: inline;
+
+    }
+    ul li{
+        display: block;
+    }
+   
+    .starting{
+        border: 2px solid blue;
+        height: 50px;
+    }
+
+   
+    .disp1{
+    
+    width: 200%;
+    margin-left: 1px;
+    border: 6px solid whitesmoke;
+    margin-top: 82px;
+    height: 284px;
+}
+.bigimg{
+
+   
+
+    width: 414px;
+    height: 285px;
+    margin-right: 35em;
+    border-radius: 4px;
+}
+.datamove{
+    margin-right: 416px;
+    color: whitesmoke;
+}
+.miniimg{
+   
+    color: whitesmoke;
+    width: 355px;
+    position: relative;
+    height: 140px;
+    right: 242px;
+    border-radius: 4px;
+}
+.imagemini {
+
+
+    position: relative;
+    bottom: 414px;
+    left: 453px;
+    padding-right: 33px;
+    padding-bottom: 1px;
+}
+.thelatest {
+   
+    
+
+    position: absolute;
+    top: 24em;
+    left: 0em;
+}
+.box{
+    border: 1px solid whitesmoke;
+    width: 30.8em;
+    margin-left: 0em;
+    display: inline-block;
+    height: 79em;
+    margin-top: 128px;
+    padding-right: 11px;
+}
+.image1 {
+  
+    width: 340px;
+    height: 230px;
+    margin-right: 18em;
+}
+.title{
+    font-size: larger;
+    font-weight: bolder;
+    margin-right: 12em
+}
+.description{
+    display: none;
+}
+.date{
+    display: none;
+}
+.category{
+    display: none;
+}
+.box2{
+    height: 383px;
+    width: 493px;
+    margin: 11px;
+    margin-bottom: -8em;
+}
+.latest {
+   
+    position: relative;
+    top: 2em;
+    right: 4em;
+    font-size: xx-large;
+}
+.boxmain {
+
+    border: 5px solid whitesmoke;
+    width: 30.6em;
+    margin-left: 0em;
+    margin-top: 83px;
+
+}
+.imageslatest {
+    
+    width: 31em;
+    height: 16em;
+    padding-bottom: 2px;
+}
+.space {
+    margin-left: 0em;
+    font-size: medium;
+}
+/* .descriptionlatest{
+    display: none;
+} */
+.boxlatest {
+    /* border: 2px solid green; */
+    display: inline-block;
+}
+.postadd{
+    display: none;
+}
+.travelimage{
+    display: none;
+}
+.up{
+   
+    margin-left: 0em;
+    border: 3px solid white;
+    margin-top: 79em;
+}
+.headingoftoppost {
+    margin-right: 11em;
+    font-size: 2em;
+
+}
+.tophead {
+    margin-left: 0em;
+}
+.imagetoppost {
+    width: 31em;
+}
+.move{
+    font-size: 1.6em;
+}
+.storieshead{
+    margin-bottom: 2em;
+}
+/* .storieshead {
+    margin-top: 143em;
+    border: 2px solid lightsalmon;
+} */
+.headingofstories {
+
+    margin-top: 72em;
+}
+.storiesbox {
+
+  
+    border: 2px solid whitesmoke;
+    width: 98%;
+    margin-left: 0em;
+    height: 77em;
+    display: block;
+
+}
+.storiesofcategory{
+    font-size: large;
+    margin-left: 0em;
+}
+.titlestories{
+    color: black;
+    font-weight: bolder;
+
+}
+.descriptionstories{
+    color: black;
+
+
+}
+.categorystories{
+    color: black;
+
+
+
+}
+.datestories{
+    color: gray;
+    font-weight: 200;
+
+}
+
+.mainbollywood {
+
+    width: 346px;
+    position: relative;
+    top: 10px;
+    left: 0em;
+}
+.headingoftopost{
+    margin-right: 11em;
+    font-size: xx-large;
+}
+.straight{
+    font-size: medium;
+}
+.postaddbolly{
+    display: none;
+}
+.deets{
+    
+    margin-left: 0em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 30em;
+    height: 108em;
+}
+.imagedeets {
+        width: 30em;
+}
+.titleinfo{
+    font-size: xx-large;
+
+}
+.paradeets{
+    font-size: medium;
+}
+/* .extra{
+    width: 30em;
+} */
+}
