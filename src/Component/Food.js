@@ -30,9 +30,9 @@ export default function Food() {
             <h1 className='latest'>Latest</h1>
             <div className='boxmain' >
                 {
-                    filterc.filter((value) => load ? value.Id <=25 : value.Id <=23).map((items) => {
+                    filterc.filter((value) => load ? value.Id <=25 : value.Id <=23).map((items,index) => {
                         return (
-                            <div className='boxlatest' onClick={() => store(`/category/${items.Id}`)}>
+                            <div key={index} className='boxlatest' onClick={() => store(`/category/${items.Id}`)}>
                                 <img className='imageslatest' src={items.imageurl} alt='' />
                                 <div className='space'>
                                     <p className='titlelatest'> {items.title}</p>
@@ -55,9 +55,9 @@ export default function Food() {
             <div className='mainbollywood'>
                 <h1>TopPosts</h1>
 
-                {filterc.filter((value) => value.likes >= 100).map((items) => {
+                {filterc.filter((value) => value.likes >= 100).map((items,index) => {
                     return (
-                        <div className='spacingbolly' onClick={() => store(`/category/${items.Id}`)}>
+                        <div key={index} className='spacingbolly' onClick={() => store(`/category/${items.Id}`)}>
 
                             <img className='imagetoppost' src={items.imageurl} alt='' />
                             <div className='straight'>

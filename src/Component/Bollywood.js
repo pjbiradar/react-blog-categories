@@ -1,27 +1,22 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react'
-import {useNavigate } from 'react-router-dom';
+import { useState, useEffect} from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+
 export default function Bollywood() {
     const [start, setStart] = useState([]);
-    useEffect(()=>{
-        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog",
-        {
-            params:{category:"Bollywood"}
+    useEffect(() => {
+        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog/",
+            {
+                params: { category: "Bollywood" }
 
-        }).then((req,res)=>{
-            const data=req.data;
-            setStart(data)
-        })
-    },[])
-   
-
+            }).then((req, res) => {
+                const data = req.data;
+                setStart(data)
+            })
+    }, [])
     const [load, setLoad] = useState(false);
-    const btnclick = () => {
+    const btnclick = () => {setLoad(true) }
 
-        setLoad(true)
-        console.log("hello");
-
-    }
     let store = useNavigate();
     const filterc = start;
 
@@ -30,19 +25,22 @@ export default function Bollywood() {
             <h1 className='latest'>Latest</h1>
             <div className='boxmain'>
                 {
-                    filterc.filter((value) => load ? value.Id <=13: value.Id <=10).map((items,index) => {
+                    filterc.filter((value) => load ? value.Id <= 13 : value.Id <= 10).map((items, index) => {
                         return (
-                            <div key={index} className='boxlatest' onClick={()=>store(`/category/${items.Id}`)}>
-                                <img className='imageslatest' src={items.imageurl} alt='' />
-                                <div className='space'>
-                                    <p className='titlelatest'> {items.title}</p>
-                                    <p className='descriptionlatest'>{items.description}</p>
-                                    <p className='categorylatest,datelatest'>
-                                        {items.category}/{items.date}
-                                    </p>
-                                </div>
+                            <Link key={index} to={`/category/${items.Id}`}>
+                                <div  className='boxlatest' >
+                                    <img className='imageslatest' src={items.imageurl} alt='' />
+                                    <div className='space'>
+                                        <p className='titlelatest'> {items.title}</p>
+                                        <p className='descriptionlatest'>{items.description}</p>
+                                        <p className='categorylatest,datelatest'>
+                                            {items.category}/{items.date}
+                                        </p>
+                                    </div>
 
-                            </div>
+                                </div>
+                            </Link>
+
                         )
                     })
                 }
@@ -54,9 +52,9 @@ export default function Bollywood() {
             <div className='mainbollywood'>
                 <h1 className='headingoftopost'>TopPosts</h1>
 
-                {filterc.filter((value) => value.likes >= 100).map((items) => {
+                {filterc.filter((value) => value.likes >= 100).map((items,index) => {
                     return (
-                        <div className='spacingbolly' onClick={() => store(`/category/${items.Id}`)}>
+                        <div key={index} className='spacingbolly' onClick={() => store(`/category/${items.Id}`)}>
                             <img className='imagetoppost' src={items.imageurl} alt='' />
                             <div className='straight'>
                                 <p> {items.title} </p>
@@ -64,7 +62,7 @@ export default function Bollywood() {
                                 <p>{items.category}/{items.date}</p>
                                 {/* <p>{items.date}</p> */}
                             </div>
-                            <hr/>
+                            <hr />
 
                         </div>
 

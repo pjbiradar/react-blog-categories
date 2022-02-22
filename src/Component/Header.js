@@ -15,7 +15,7 @@ export default function Header() {
             <div className='top'>
                 <h1 >The Sirens</h1>
                 <span onClick={bar} className='menu'>
-                    <i class="fas fa-bars"></i>
+                    <i className="fas fa-bars"></i>
 
                 </span>
             </div>

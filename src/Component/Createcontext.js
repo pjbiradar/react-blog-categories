@@ -7,12 +7,14 @@ export const CreateCont = createContext();
 export const Provide = (props) => {
     const [data, setData] = useState([])
     useEffect(()=>{
-        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog").then((res)=>{
-            // console.log(res);
-            setData(res.data)
+        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog").then((req,res)=>{
+            const dat=req.data;
+
+            setData(dat)
         })
     },[])
-
+    
+ 
     return (
         <CreateCont.Provider value={[data,setData]}>
             {props.children}

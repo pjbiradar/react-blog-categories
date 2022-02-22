@@ -1,17 +1,11 @@
 import './Style.css'
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useContext } from 'react';
+import { CreateCont } from './Createcontext';
 
 export default function TopPosts() {
-    const [start, setStart] = useState([]);
-    useEffect(()=>{
-        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog",
-       ).then((req,res)=>{
-            const data=req.data;
-            setStart(data)
-        })
-    },[])
+    const [data] = useContext(CreateCont);
+   
 
     let store = useNavigate();
 
@@ -19,7 +13,7 @@ export default function TopPosts() {
         <div className='up'>
             <h1 className='headingoftoppost'>Top Posts</h1>
             <div className='tophead'>
-                {start.filter((value) => value.Id <= 3).map((items, index) =>
+                {data.filter((value) => value.Id <= 3).map((items, index) =>
                     // <div className={index == 0 ? "left" : "right"}>
                     <div key={index} className='spacing' onClick={() => store(`/category/${items.Id}`)}>
                         <img className='imagetoppost' src={items.imageurl} alt='' />
@@ -42,5 +36,5 @@ export default function TopPosts() {
             </div>
         </div>
 
-    )
-}
+    )}
+

@@ -1,25 +1,20 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { CreateCont } from './Createcontext';
 
 export default function LatestStories() {
    
-    const [start, setStart] = useState([]);
-    useEffect(()=>{
-        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog",
-       ).then((req,res)=>{
-            const data=req.data;
-            setStart(data)
-        })
-    },[])
+    const [data] = useContext(CreateCont);
+   
     
     let store = useNavigate();
+   
 
     return (
         <div>
             <h1 className='headingofstories'>Latest Stories</h1>
             <div className='storiesbox'>
-                {start.filter((value) => value.Id <= 3).map(items =>
+                {data.filter((value) => value.Id <= 3).map(items =>
                     <div key={items.Id} className='storiesofcategory'  onClick={()=>store(`/category/${items.Id}`)}>
                         
                         {/* <img className='image1' src={items.imageurl} /> */}

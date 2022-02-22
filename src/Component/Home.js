@@ -1,6 +1,4 @@
 import React from 'react'
-// import Advertisement from './Component/Advertisement';
-// import Bollywood from './Component/Bollywood';
 import { Provide } from './Createcontext'
 import Latest from './Latest';
 import LatestStories from './LatestStories';
@@ -22,9 +20,7 @@ export const Home = () => {
                 <Latest />
                 <Travelimg />
                 <Advertisement />
-
                 <TopPosts />
-
                 <LatestStories />
 
 
