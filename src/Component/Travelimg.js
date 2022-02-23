@@ -12,9 +12,9 @@ export default function Travelimg() {
 
     return (
         <div className='travelimage'>
-            {data.filter((value) => value.Id ==='1').map(items =>
+            {data.filter((value) => value.id ==='1').map(items =>
             
-                <div  key={items.Id}className='disp6'  onClick={() => store(`/category/${items.Id}`)}>  
+                <div  key={items.id}className='disp6'  onClick={() => store(`/category/${items.id}`)}>  
                     <img className='bigimg' src={items.imageurl} alt=''/>
                     <div className='datamove'>
                         <p> {items.title} </p>

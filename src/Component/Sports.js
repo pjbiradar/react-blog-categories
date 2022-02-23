@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Sports() {
     const [start, setStart] = useState([]);
     useEffect(()=>{
-        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog",
+        axios.get("https://react-blogproject.herokuapp.com/api/v1/blog",
         {
             params:{category:"Sports"}
 
@@ -30,9 +30,9 @@ export default function Sports() {
             <h1 className='latest'>Latest</h1>
             <div className='boxmain'>
                 {
-                    filterc.filter((value) => load ? value.Id <=22 : value.Id <=20).map((items) => {
+                    filterc.filter((value) => load ? value.id <=22 : value.id <=20).map((items) => {
                         return (
-                            <div className='boxlatest' onClick={() => store(`/category/${items.Id}`)}>
+                            <div className='boxlatest' onClick={() => store(`/category/${items.id}`)}>
                                 <img className='imageslatest' src={items.imageurl} alt='' />
                                 <div className='space'>
                                     <p className='titlelatest'> {items.title}</p>
@@ -58,7 +58,7 @@ export default function Sports() {
 
                 {filterc.filter((value) => value.likes >= 100).map((items) => {
                     return (
-                        <div className='spacingbolly' onClick={() => store(`/category/${items.Id}`)}>
+                        <div className='spacingbolly' onClick={() => store(`/category/${items.id}`)}>
 
                             <img className='imagetoppost' src={items.imageurl} alt='' />
                             <div className='straight'>

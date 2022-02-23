@@ -5,7 +5,7 @@ export default function Travel() {
  
     const [start, setStart] = useState([]);
     useEffect(()=>{
-        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog",
+        axios.get("https://react-blogproject.herokuapp.com/api/v1/blog",
         {
             params:{category:"Travel"}
 
@@ -30,10 +30,10 @@ export default function Travel() {
             <h1 className='latest'>Latest</h1>
             <div className='boxmain' >
                 {
-                    filterc.filter((value) => load ? value.Id <=19 : value.Id <=17).map((items,index) => {
+                    filterc.filter((value) => load ? value.id <=19 : value.id <=17).map((items,index) => {
                         return (
                             
-                            <div key={index} className='boxlatest'  onClick={() => store(`/category/${items.Id}`)}>
+                            <div key={index} className='boxlatest'  onClick={() => store(`/category/${items.id}`)}>
                                 <img className='imageslatest' src={items.imageurl} alt='' />
                                 <div className='space'>
                                     <p className='titlelatest'> {items.title}</p>
@@ -59,7 +59,7 @@ export default function Travel() {
 
                 {filterc.filter((value) => value.likes >= 100).map((items) => {
                     return (
-                        <div className='spacingbolly' onClick={() => store(`/category/${items.Id}`)}>
+                        <div className='spacingbolly' onClick={() => store(`/category/${items.id}`)}>
 
                             <img className='imagetoppost' src={items.imageurl} alt='' />
                             <div className='straight'>

@@ -4,27 +4,25 @@ import { useParams } from 'react-router-dom'
 
 export default function Information() {
 
-    const [start, setStart] = useState([]);
+    const [data, setData] = useState([]);
     
-    const { Id } = useParams();
+    const { id } = useParams();
     useEffect(()=>{
-        axios.get(`https://react-blog-backendd.herokuapp.com/api/v1/blog/category/${Id}`
+        axios.get(`https://react-blogproject.herokuapp.com/api/v1/blog/category/${id}`
        ).then((req,res)=>{
             const data=req.data;
-            setStart(...data)
+            console.log(data)
+            setData(...data)
         })
-    },[Id])
-
-
-
+    },[id])
 
     return (
         <div>
-            {/* {start.filter((value) => value.Id === Id).map((items,index) => { */}
+            {/* {data.filter((value) => value.Id === Id).map((items,index) => { */}
                 {/* return ( */}
 
                     <div   className='deets'>
-                        <h1 className='titleinfo'>{start.title}</h1>
+                        <h1 className='titleinfo'>{data.title}</h1>
                         <div>
                             {/* <h4 className='sharing'>{items.share}</h4> */}
                             <span className='insta'>
@@ -37,9 +35,9 @@ export default function Information() {
                                 <i className="fab fa-twitter-square"></i>
                             </span>
                         </div>
-                        <img className='extra' src={start.extra} alt='' />
-                        <p className='paradeets'>{start.details}</p>
-                        <img className='imagedeets' src={start.detailsimage} alt='' />
+                        <img className='extra' src={data.extra} alt='' />
+                        <p className='paradeets'>{data.details}</p>
+                        <img className='imagedeets' src={data.detailsimage} alt='' />
                     </div>
 
 

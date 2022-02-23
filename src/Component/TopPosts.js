@@ -13,9 +13,9 @@ export default function TopPosts() {
         <div className='up'>
             <h1 className='headingoftoppost'>Top Posts</h1>
             <div className='tophead'>
-                {data.filter((value) => value.Id <= 3).map((items, index) =>
+                {data.filter((value) => value.id <= 3).map((items, index) =>
                     // <div className={index == 0 ? "left" : "right"}>
-                    <div key={index} className='spacing' onClick={() => store(`/category/${items.Id}`)}>
+                    <div key={index} className='spacing' onClick={() => store(`/category/${items.id}`)}>
                         <img className='imagetoppost' src={items.imageurl} alt='' />
                         <div className='move'>
                             <p className='highlight'> {items.title}</p>  

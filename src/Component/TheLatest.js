@@ -14,8 +14,8 @@ export default function TheLatest() {
         <div>
             <h1 className='thelatest'>The Latest</h1>
             <div className='box'>
-                {data.filter((value) => value.Id <= 3).map(items =>
-                    <div key={items.Id} className='box2' onClick={() => store(`/category/${items.Id}`)}>
+                {data.filter((value) => value.id <= 3).map(items =>
+                    <div key={items.id} className='box2' onClick={() => store(`/category/${items.id}`)}>
                         <img className='image1' src={items.imageurl} alt='' />
                         <p className='title'> {items.title} </p>
                         <p className='description'>{items.description}</p>

@@ -7,11 +7,18 @@ export default function Displayimg() {
 
     const [data] = useContext(CreateCont);
     let store = useNavigate();
+    // if(data!=undefined){
+
+    // }
+    // else{
+        
+    // }
 
     return (
+
         <div className='disp1' >
-            {data.filter((value) => value.Id <= 1).map((items,index) =>
-                <div key={index} className='disp2' onClick={() => store(`/category/${items.Id}`)}>
+            {data.filter((value) => value.id <= 1).map((items,index) =>
+                <div key={index} className='disp2' onClick={() => store(`/category/${items.id}`)}>
 
                     <img className='bigimg' src={items.imageurl} alt='' />
                     <div className='datamove'>
@@ -25,14 +32,14 @@ export default function Displayimg() {
             }
           
             <div>
-                {data.filter((value)=> value.Id==='3').map((items,index)=>
+                {data.filter((value)=> value.id==='3').map((items,index)=>
                     <div key={index}>
-                    <img className='imagemini' src={items.imageurl} alt='' onClick={() => store(`/category/${items.Id}`)} />
+                    <img className='imagemini' src={items.imageurl} alt='' onClick={() => store(`/category/${items.id}`)} />
                     <p className='dataing'>{items.category}/{items.date}</p>
                 </div>)}
-                {data.filter((value)=> value.Id==='4').map((items,index)=>
+                {data.filter((value)=> value.id==='4').map((items,index)=>
                     <div key={index} className='brek2'>
-                    <img className='imagemini2' src={items.imageurl} alt='' onClick={() => store(`/category/${items.Id}`)} />
+                    <img className='imagemini2' src={items.imageurl} alt='' onClick={() => store(`/category/${items.id}`)} />
                     <p className='dataing'>{items.category}/{items.date}</p>
                 </div>)}
             </div>

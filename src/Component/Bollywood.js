@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 export default function Bollywood() {
     const [start, setStart] = useState([]);
     useEffect(() => {
-        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog/",
+        axios.get("https://react-blogproject.herokuapp.com/api/v1/blog/",
             {
                 params: { category: "Bollywood" }
 
@@ -25,9 +25,9 @@ export default function Bollywood() {
             <h1 className='latest'>Latest</h1>
             <div className='boxmain'>
                 {
-                    filterc.filter((value) => load ? value.Id <= 13 : value.Id <= 10).map((items, index) => {
+                    filterc.filter((value) => load ? value.id <= 13 : value.id <= 10).map((items, index) => {
                         return (
-                            <Link key={index} to={`/category/${items.Id}`}>
+                            <Link key={index} to={`/category/${items.id}`}>
                                 <div  className='boxlatest' >
                                     <img className='imageslatest' src={items.imageurl} alt='' />
                                     <div className='space'>
@@ -54,7 +54,7 @@ export default function Bollywood() {
 
                 {filterc.filter((value) => value.likes >= 100).map((items,index) => {
                     return (
-                        <div key={index} className='spacingbolly' onClick={() => store(`/category/${items.Id}`)}>
+                        <div key={index} className='spacingbolly' onClick={() => store(`/category/${items.id}`)}>
                             <img className='imagetoppost' src={items.imageurl} alt='' />
                             <div className='straight'>
                                 <p> {items.title} </p>

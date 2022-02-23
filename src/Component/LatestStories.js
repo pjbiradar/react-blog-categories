@@ -14,8 +14,8 @@ export default function LatestStories() {
         <div>
             <h1 className='headingofstories'>Latest Stories</h1>
             <div className='storiesbox'>
-                {data.filter((value) => value.Id <= 3).map(items =>
-                    <div key={items.Id} className='storiesofcategory'  onClick={()=>store(`/category/${items.Id}`)}>
+                {data.filter((value) => value.id <= 3).map(items =>
+                    <div key={items.id} className='storiesofcategory'  onClick={()=>store(`/category/${items.id}`)}>
                         
                         {/* <img className='image1' src={items.imageurl} /> */}
                         <p className='titlestories'> {items.title} </p>
