@@ -1,5 +1,5 @@
 import React from 'react'
-import { Provide } from './Createcontext'
+// import { Provide } from './Createcontext'
 import Latest from './Latest';
 import LatestStories from './LatestStories';
 import TheLatest from './TheLatest';
@@ -14,7 +14,7 @@ import Advertisement from './Advertisement';
 export const Home = () => {
     return (
         <div>
-            <Provide>
+            {/* <Provide> */}
                 <Displayimg />
                 <TheLatest />
                 <Latest />
@@ -24,7 +24,7 @@ export const Home = () => {
                 <LatestStories />
 
 
-            </Provide>
+            {/* </Provide> */}
 
         </div>
     )
