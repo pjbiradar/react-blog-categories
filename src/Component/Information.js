@@ -7,7 +7,6 @@ export default function Information() {
     const [start, setStart] = useState([]);
     
     const { Id } = useParams();
-    console.log(Id);
     useEffect(()=>{
         axios.get(`https://react-blog-backendd.herokuapp.com/api/v1/blog/category/${Id}`
        ).then((req,res)=>{
@@ -16,7 +15,6 @@ export default function Information() {
         })
     },[Id])
 
-console.log(start)
 
 
 
@@ -30,13 +28,13 @@ console.log(start)
                         <div>
                             {/* <h4 className='sharing'>{items.share}</h4> */}
                             <span className='insta'>
-                                <i class="fab fa-instagram"></i>
+                                <i className="fab fa-instagram"></i>
                             </span>
                             <span className='facebook'>
-                                <i class="fab fa-facebook"></i>
+                                <i className="fab fa-facebook"></i>
                             </span>
                             <span className='twitter'>
-                                <i class="fab fa-twitter-square"></i>
+                                <i className="fab fa-twitter-square"></i>
                             </span>
                         </div>
                         <img className='extra' src={start.extra} alt='' />
