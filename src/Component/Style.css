@@ -350,6 +350,9 @@ ul li{
     width: 198px;
     height: 79px;
 }
+.fa-spinner{
+    margin-top: 8rem;
+}
 
 
 @media screen and (min-width:360px) and (max-width:640px) {

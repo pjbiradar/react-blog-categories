@@ -16,6 +16,12 @@ export default function Information() {
         })
     },[id])
 
+    if(data.length<=0){
+        return (<div>
+            <i className="fa-5x fa-solid fa-spinner"></i>
+        </div>)
+    }else
+
     return (
         <div>
             {/* {data.filter((value) => value.Id === Id).map((items,index) => { */}

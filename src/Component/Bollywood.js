@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Bollywood() {
@@ -15,12 +15,22 @@ export default function Bollywood() {
             })
     }, [])
     const [load, setLoad] = useState(false);
-    const btnclick = () => {setLoad(true) }
+    const btnclick = () => { setLoad(true) }
 
     let store = useNavigate();
     const filterc = start;
 
+if(start.length<=0){
+    return (<div>
+        <i className="fa-5x fa-solid fa-spinner"></i>
+    </div>)
+}else{
     return (
+      
+
+    
+
+
         <div>
             <h1 className='latest'>Latest</h1>
             <div className='boxmain'>
@@ -28,7 +38,7 @@ export default function Bollywood() {
                     filterc.filter((value) => load ? value.id <= 13 : value.id <= 10).map((items, index) => {
                         return (
                             <Link key={index} to={`/category/${items.id}`}>
-                                <div  className='boxlatest' >
+                                <div className='boxlatest' >
                                     <img className='imageslatest' src={items.imageurl} alt='' />
                                     <div className='space'>
                                         <p className='titlelatest'> {items.title}</p>
@@ -52,7 +62,7 @@ export default function Bollywood() {
             <div className='mainbollywood'>
                 <h1 className='headingoftopost'>TopPosts</h1>
 
-                {filterc.filter((value) => value.likes >= 100).map((items,index) => {
+                {filterc.filter((value) => value.likes >= 100).map((items, index) => {
                     return (
                         <div key={index} className='spacingbolly' onClick={() => store(`/category/${items.id}`)}>
                             <img className='imagetoppost' src={items.imageurl} alt='' />
@@ -74,5 +84,8 @@ export default function Bollywood() {
             </div>
 
         </div>
+            
+            
     )
-}
+            }
+    }

@@ -25,6 +25,12 @@ export default function Travel() {
     let store = useNavigate();
     const filterc = start
 
+    if(start.length<=0){
+        return (<div>
+            <i className="fa-5x fa-solid fa-spinner"></i>
+        </div>)
+    }else
+
     return (
         <div>
             <h1 className='latest'>Latest</h1>

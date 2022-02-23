@@ -7,7 +7,7 @@ export const CreateCont = createContext();
 export const Provide = (props) => {
     const [data, setData] = useState([])
     useEffect(()=>{
-        axios.get("https://react-blog-backendd.herokuapp.com/api/v1/blog").then((req,res)=>{
+        axios.get("https://react-blogproject.herokuapp.com/api/v1/blog").then((req,res)=>{
             const dat=req.data;
 
             setData(dat)
